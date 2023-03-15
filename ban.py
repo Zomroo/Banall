@@ -21,7 +21,7 @@ def ban_all(update, context):
     bot.send_message(chat_id=chat_id, text='All group members have been banned.')
 
 # Create the updater and dispatcher
-updater = Updater(TOKEN, use_context=True)
+updater = Updater(TOKEN)
 dispatcher = updater.dispatcher
 
 # Register the ban_all command handler
