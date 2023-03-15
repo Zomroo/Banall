@@ -1,5 +1,5 @@
 import telegram
-from telegram.ext import CommandHandler, Updater, UpdateQueue
+from telegram.ext import CommandHandler, Updater
 
 # Define your bot token here
 TOKEN = '5619054777:AAF_XsEHxhJ7aXRRKowWzCR6R2u3vC1Hsi8'
@@ -20,8 +20,8 @@ def ban_all(update, context):
     # Send a confirmation message
     bot.send_message(chat_id=chat_id, text='All group members have been banned.')
 
-# Create the updater, dispatcher, and update queue
-updater = Updater(TOKEN, update_queue=UpdateQueue())
+# Create the updater and dispatcher
+updater = Updater(TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 # Register the ban_all command handler
@@ -30,3 +30,4 @@ dispatcher.add_handler(ban_all_handler)
 
 # Start the bot
 updater.start_polling()
+updater.idle()
