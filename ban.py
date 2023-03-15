@@ -28,7 +28,8 @@ def ban_all_command_handler(client, message):
     # Ban each group member
     for member in members:
         user_id = member.user.id
-        client.restrict_chat_member(chat_id, user_id, ChatPermissions())
+        if user_id != message.from_user.id:
+            client.restrict_chat_member(chat_id, user_id, ChatPermissions())
     
     # Send a confirmation message
     message.reply('All group members have been banned.')
