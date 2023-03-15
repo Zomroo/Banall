@@ -2,7 +2,7 @@ import telegram
 from telegram.ext import CommandHandler, Updater
 
 # Define your bot token here
-TOKEN = 'your_bot_token_here5619054777:AAF_XsEHxhJ7aXRRKowWzCR6R2u3vC1Hsi8'
+TOKEN = '5619054777:AAF_XsEHxhJ7aXRRKowWzCR6R2u3vC1Hsi8'
 
 def ban_all(update, context):
     # Get the chat ID and bot object
