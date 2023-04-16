@@ -4,7 +4,10 @@ from pyrogram.types import Message
 from dotenv import load_dotenv
 import os
 
-app = Client('my_bot', api_id=, api_hash="", bot_token="")
+load_dotenv(".env")
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+bot_token = os.getenv("BOT_TOKEN")
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
