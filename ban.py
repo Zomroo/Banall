@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv(".env")
-api_id = int(os.getenv("API_ID"))
-api_hash = os.getenv("API_HASH")
-bot_token = os.getenv("BOT_TOKEN")
+api_id = int(os.getenv("16844842"))
+api_hash = os.getenv("f6b0ceec5535804be7a56ac71d08a5d4")
+bot_token = os.getenv("5931504207:AAF-jzKC8USclrFYrtcaeAZifQcmEcwFNe4")
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
