@@ -15,7 +15,7 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 @app.on_message(filters.private & filters.command("start"))
 async def start_command_handler(client, message):
     # Load the image from file
-    photo_file = "Open.png"
+    photo_file = "/home/gokuinstu2/Banall/Open.png"
     photo = InputMediaPhoto(photo_file)
 
     # Send the photo with a caption
